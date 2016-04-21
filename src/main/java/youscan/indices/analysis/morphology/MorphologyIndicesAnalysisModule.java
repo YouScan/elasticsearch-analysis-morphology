@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.elasticsearch.indices.analysis.morphology;
+package youscan.indices.analysis.morphology;
 
 import org.elasticsearch.common.inject.AbstractModule;
 

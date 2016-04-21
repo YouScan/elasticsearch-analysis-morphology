@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.elasticsearch.index.analysis.morphology;
+package youscan.index.analysis.morphology;
 
 import org.elasticsearch.index.analysis.AnalysisModule;
-import org.elasticsearch.index.analysis.morphology.english.EnglishMorphologyAnalyzerProvider;
-import org.elasticsearch.index.analysis.morphology.english.EnglishMorphologyTokenFilterFactory;
-import org.elasticsearch.index.analysis.morphology.russian.RussianMorphologyAnalyzerProvider;
-import org.elasticsearch.index.analysis.morphology.russian.RussianMorphologyTokenFilterFactory;
+import youscan.index.analysis.morphology.english.EnglishMorphologyAnalyzerProvider;
+import youscan.index.analysis.morphology.english.EnglishMorphologyTokenFilterFactory;
+import youscan.index.analysis.morphology.russian.RussianMorphologyAnalyzerProvider;
+import youscan.index.analysis.morphology.russian.RussianMorphologyTokenFilterFactory;
 
 /**
  *

@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.elasticsearch.index.analysis.morphology.russian;
+package youscan.index.analysis.morphology.english;
 
 import org.apache.lucene.morphology.analyzer.MorphologyAnalyzer;
-import org.apache.lucene.morphology.russian.RussianAnalyzer;
+import org.apache.lucene.morphology.english.EnglishAnalyzer;
 import org.elasticsearch.ElasticsearchIllegalArgumentException;
 import org.elasticsearch.common.inject.Inject;
 import org.elasticsearch.common.inject.assistedinject.Assisted;
@@ -31,18 +31,18 @@ import java.io.IOException;
 /**
  *
  */
-public class RussianMorphologyAnalyzerProvider extends AbstractIndexAnalyzerProvider<MorphologyAnalyzer> {
+public class EnglishMorphologyAnalyzerProvider extends AbstractIndexAnalyzerProvider<MorphologyAnalyzer> {
 
     private final MorphologyAnalyzer analyzer;
 
     @Inject
-    public RussianMorphologyAnalyzerProvider(Index index, @IndexSettings Settings indexSettings,
+    public EnglishMorphologyAnalyzerProvider(Index index, @IndexSettings Settings indexSettings,
                                              @Assisted String name, @Assisted Settings settings) {
         super(index, indexSettings, name, settings);
         try {
-            analyzer = new RussianAnalyzer();
+            analyzer = new EnglishAnalyzer();
         } catch (IOException ex) {
-            throw new ElasticsearchIllegalArgumentException("Unable to load Russian morphology analyzer", ex);
+            throw new ElasticsearchIllegalArgumentException("Unable to load English morphology analyzer", ex);
         }
     }
 

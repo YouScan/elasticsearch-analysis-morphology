@@ -14,18 +14,17 @@
  * limitations under the License.
  */
 
-package org.elasticsearch.index.analysis.morphology.russian;
+package youscan.index.analysis.morphology.english;
 
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.morphology.LuceneMorphology;
-import org.apache.lucene.morphology.analyzer.MorphologyFilter;
-import org.apache.lucene.morphology.russian.RussianLuceneMorphology;
+import org.apache.lucene.morphology.english.EnglishLuceneMorphology;
 import org.elasticsearch.ElasticsearchIllegalArgumentException;
 import org.elasticsearch.common.inject.Inject;
 import org.elasticsearch.common.settings.Settings;
 import org.elasticsearch.index.Index;
 import org.elasticsearch.index.analysis.AbstractTokenFilterFactory;
-import org.elasticsearch.index.analysis.morphology.common.KeywordPreserveMorphologyFilter;
+import youscan.index.analysis.morphology.common.KeywordPreserveMorphologyFilter;
 import org.elasticsearch.index.settings.IndexSettings;
 
 import java.io.IOException;
@@ -33,17 +32,17 @@ import java.io.IOException;
 /**
  *
  */
-public class RussianMorphologyTokenFilterFactory extends AbstractTokenFilterFactory {
+public class EnglishMorphologyTokenFilterFactory extends AbstractTokenFilterFactory {
 
     private final LuceneMorphology luceneMorph;
 
     @Inject
-    public RussianMorphologyTokenFilterFactory(Index index, @IndexSettings Settings indexSettings, String name, Settings settings) {
+    public EnglishMorphologyTokenFilterFactory(Index index, @IndexSettings Settings indexSettings, String name, Settings settings) {
         super(index, indexSettings, name, settings);
         try {
-            luceneMorph = new RussianLuceneMorphology();
+            luceneMorph = new EnglishLuceneMorphology();
         } catch (IOException ex) {
-            throw new ElasticsearchIllegalArgumentException("Unable to load Russian morphology analyzer", ex);
+            throw new ElasticsearchIllegalArgumentException("Unable to load English morphology analyzer", ex);
         }
     }
 

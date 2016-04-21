@@ -1,4 +1,4 @@
-package org.elasticsearch.index.analysis.morphology.common;
+package youscan.index.analysis.morphology.common;
 
 import org.apache.lucene.analysis.TokenFilter;
 import org.apache.lucene.analysis.TokenStream;

@@ -14,11 +14,10 @@
  * limitations under the License.
  */
 
-package org.elasticsearch.indices.analysis.morphology;
+package youscan.indices.analysis.morphology;
 
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.morphology.LuceneMorphology;
-import org.apache.lucene.morphology.analyzer.MorphologyFilter;
 import org.apache.lucene.morphology.english.EnglishAnalyzer;
 import org.apache.lucene.morphology.english.EnglishLuceneMorphology;
 import org.apache.lucene.morphology.russian.RussianAnalyzer;
@@ -30,7 +29,7 @@ import org.elasticsearch.index.analysis.AnalyzerScope;
 import org.elasticsearch.index.analysis.PreBuiltAnalyzerProviderFactory;
 import org.elasticsearch.index.analysis.PreBuiltTokenFilterFactoryFactory;
 import org.elasticsearch.index.analysis.TokenFilterFactory;
-import org.elasticsearch.index.analysis.morphology.common.KeywordPreserveMorphologyFilter;
+import youscan.index.analysis.morphology.common.KeywordPreserveMorphologyFilter;
 import org.elasticsearch.indices.analysis.IndicesAnalysisService;
 
 import java.io.IOException;

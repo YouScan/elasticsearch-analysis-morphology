@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <name>elasticsearch-analysis-morphology</name>
+    <name>youscan-analysis-morphology</name>
     <modelVersion>4.0.0</modelVersion>
-    <groupId>org.elasticsearch</groupId>
-    <artifactId>elasticsearch-analysis-morphology</artifactId>
+    <groupId>youscan</groupId>
+    <artifactId>youscan-analysis-morphology</artifactId>
     <version>1.2.1</version>
     <packaging>jar</packaging>
-    <description>Russian Morphology for ElasticSearch</description>
+    <description>Russian Morphology for ElasticSearch / YouScan mod.</description>
     <inceptionYear>2012</inceptionYear>
     <licenses>
         <license>

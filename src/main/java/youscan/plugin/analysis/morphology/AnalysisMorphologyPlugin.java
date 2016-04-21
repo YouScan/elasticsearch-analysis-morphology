@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.elasticsearch.plugin.analysis.morphology;
+package youscan.plugin.analysis.morphology;
 
 import org.elasticsearch.common.collect.ImmutableList;
 import org.elasticsearch.common.inject.Module;
 import org.elasticsearch.index.analysis.AnalysisModule;
-import org.elasticsearch.index.analysis.morphology.MorphologyAnalysisBinderProcessor;
-import org.elasticsearch.indices.analysis.morphology.MorphologyIndicesAnalysisModule;
+import youscan.index.analysis.morphology.MorphologyAnalysisBinderProcessor;
+import youscan.indices.analysis.morphology.MorphologyIndicesAnalysisModule;
 import org.elasticsearch.plugins.AbstractPlugin;
 
 import java.util.Collection;

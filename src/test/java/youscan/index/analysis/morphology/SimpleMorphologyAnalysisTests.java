@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.elasticsearch.index.analysis.morphology;
+package youscan.index.analysis.morphology;
 
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
@@ -50,7 +50,6 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 import java.io.StringReader;
 
-import static org.elasticsearch.common.settings.ImmutableSettings.Builder.EMPTY_SETTINGS;
 import static org.hamcrest.Matchers.instanceOf;
 
 /**

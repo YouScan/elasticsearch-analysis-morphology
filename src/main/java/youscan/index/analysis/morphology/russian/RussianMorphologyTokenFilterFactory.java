@@ -14,16 +14,17 @@
  * limitations under the License.
  */
 
-package org.elasticsearch.index.analysis.morphology.english;
+package youscan.index.analysis.morphology.russian;
 
-import org.apache.lucene.morphology.analyzer.MorphologyAnalyzer;
-import org.apache.lucene.morphology.english.EnglishAnalyzer;
+import org.apache.lucene.analysis.TokenStream;
+import org.apache.lucene.morphology.LuceneMorphology;
+import org.apache.lucene.morphology.russian.RussianLuceneMorphology;
 import org.elasticsearch.ElasticsearchIllegalArgumentException;
 import org.elasticsearch.common.inject.Inject;
-import org.elasticsearch.common.inject.assistedinject.Assisted;
 import org.elasticsearch.common.settings.Settings;
 import org.elasticsearch.index.Index;
-import org.elasticsearch.index.analysis.AbstractIndexAnalyzerProvider;
+import org.elasticsearch.index.analysis.AbstractTokenFilterFactory;
+import youscan.index.analysis.morphology.common.KeywordPreserveMorphologyFilter;
 import org.elasticsearch.index.settings.IndexSettings;
 
 import java.io.IOException;
@@ -31,23 +32,22 @@ import java.io.IOException;
 /**
  *
  */
-public class EnglishMorphologyAnalyzerProvider extends AbstractIndexAnalyzerProvider<MorphologyAnalyzer> {
+public class RussianMorphologyTokenFilterFactory extends AbstractTokenFilterFactory {
 
-    private final MorphologyAnalyzer analyzer;
+    private final LuceneMorphology luceneMorph;
 
     @Inject
-    public EnglishMorphologyAnalyzerProvider(Index index, @IndexSettings Settings indexSettings,
-                                             @Assisted String name, @Assisted Settings settings) {
+    public RussianMorphologyTokenFilterFactory(Index index, @IndexSettings Settings indexSettings, String name, Settings settings) {
         super(index, indexSettings, name, settings);
         try {
-            analyzer = new EnglishAnalyzer();
+            luceneMorph = new RussianLuceneMorphology();
         } catch (IOException ex) {
-            throw new ElasticsearchIllegalArgumentException("Unable to load English morphology analyzer", ex);
+            throw new ElasticsearchIllegalArgumentException("Unable to load Russian morphology analyzer", ex);
         }
     }
 
     @Override
-    public MorphologyAnalyzer get() {
-        return this.analyzer;
+    public TokenStream create(TokenStream tokenStream) {
+        return new KeywordPreserveMorphologyFilter(tokenStream, luceneMorph);
     }
 }
