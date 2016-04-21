@@ -32,12 +32,12 @@ public class AnalysisMorphologyPlugin extends AbstractPlugin {
 
     @Override
     public String name() {
-        return "analysis-morphology";
+        return "youscan-morphology";
     }
 
     @Override
     public String description() {
-        return "Morphology analysis support";
+        return "Imotov morphology analysis support";
     }
 
     @Override

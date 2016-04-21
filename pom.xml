@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <name>youscan-analysis-morphology</name>
+    <name>youscan-morphology</name>
     <modelVersion>4.0.0</modelVersion>
     <groupId>youscan</groupId>
-    <artifactId>youscan-analysis-morphology</artifactId>
-    <version>1.2.1</version>
+    <artifactId>youscan-morphology</artifactId>
+    <version>1.2.2</version>
     <packaging>jar</packaging>
     <description>Russian Morphology for ElasticSearch / YouScan mod.</description>
     <inceptionYear>2012</inceptionYear>
@@ -30,7 +30,7 @@
     </parent>
 
     <properties>
-        <elasticsearch.version>1.6.0</elasticsearch.version>
+        <elasticsearch.version>1.0.0</elasticsearch.version>
         <russian.morphology.version>4.10.0</russian.morphology.version>
     </properties>
 
@@ -44,14 +44,6 @@
             <url>http://dl.bintray.com/imotov/elasticsearch-plugins</url>
         </repository>
     </repositories>
-
-    <distributionManagement>
-        <repository>
-            <id>bintray-imotov-elasticsearch-plugins-elasticsearch-analysis-morphology</id>
-            <name>imotov-elasticsearch-plugins-elasticsearch-analysis-morphology</name>
-            <url>https://api.bintray.com/maven/imotov/elasticsearch-plugins/elasticsearch-analysis-morphology</url>
-        </repository>
-    </distributionManagement>
 
     <dependencies>
         <dependency>
